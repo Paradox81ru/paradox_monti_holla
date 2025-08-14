@@ -6,7 +6,7 @@ sys.path.append(str(Path.cwd()))
 from three_doors_challenge.game import Game, GameResult
 
 
-class TestChallenge(unittest.TestCase):
+class TestGame(unittest.TestCase):
     def test_host_opens_door(self):
         """ Тестироует открытие ведушим двери с козой. """
         game = Game()
@@ -34,3 +34,4 @@ class TestChallenge(unittest.TestCase):
             result = game. gamer_opens_another_door()        
             with self.subTest(f"check {i}: {result}"):
                 self.assertNotIn(result.opened_door, set([result.opened_to_presenter, result.selected_door]))
+
