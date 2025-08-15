@@ -4,7 +4,7 @@ import platform
 from game import Game
 
 CLEAR_COMMAND = 'clear' if platform.system() == 'Linux' else "cls"
-TITLE = "*** Статистика парадокса Монти Холла. ***"
+TITLE = "*** Статистика парадокса Монти Холла ***"
 
 class Challenge:
     def __init__(self) -> None:
@@ -23,8 +23,8 @@ class Challenge:
 
     def _show_menu(self):
         """ Отображает меню действий. """
-        print("1. Запустить статистики при смене двери.")
-        print('2. Запустить статистику при выборе той же дери.')
+        print("1. Имитация с изменением выбора двери.")
+        print('2. Имитация с сохранением выбранной двери.')
         print(f"(q)uit. Выход.")
         print("")
 
@@ -61,7 +61,7 @@ class Challenge:
         """ Запрос количеств циклов """
         while True:
             try:
-                count = int(input("Сколько раз требуется произвести имитацию: "))
+                count = int(input("Сколько раз провести имитацию: "))
                 if count < 1:
                     print("Количество должнл быть больше нуля")
                 else:
