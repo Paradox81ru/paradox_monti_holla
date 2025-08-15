@@ -16,7 +16,7 @@ class Challenge:
             self._clear_display()
             print(TITLE)
             self._show_menu()
-            action_num = input("Выбериет пункт меню: ").strip(' .').lower()
+            action_num = input("Выберите пункт меню: ").strip(' .').lower()
             if action_num in ('q', 'quit'):
                 break
             self._actions_handle(action_num)        
